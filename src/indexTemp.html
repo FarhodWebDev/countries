@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title><%= htmlWebpackPlugin.options.title %></title>
+ </head>
+ <body class="text-3xl">
+  <div
+   id="modal"
+   class="fixed top-0 w-full h-full bg-slate-500 z-20 backdrop-blur-3xl"
+  >
+   <div
+    id="loader"
+    class="loader top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+   ></div>
+  </div>
+
+  <header class="bg-blue-400 p-5 fixed top-0 left-0 right-0 z-10">
+   <nav class="flex justify-between content-center">
+    <a href="./" class="site-link hover:opacity-70">Countries</a>
+
+    <form>
+     <input
+      type="text"
+      class="p-1 w-64 text-xl rounded-md"
+      id="name"
+      placeholder="Search by country name..."
+     />
+
+     <input
+      type="text"
+      class="p-1 w-52 text-xl rounded-md"
+      id="byCapital"
+      placeholder="Search by capital..."
+     />
+
+     <select class="p-1 w-52 text-xl rounded-md" id="regionSelect">
+      <option value="Europe">Europe</option>
+      <option value="Africa">Africa</option>
+      <option value="Americas">Americas</option>
+      <option value="Asia">Asia</option>
+      <option value="Oceania">Oceania</option>
+      <option value="Antarctic">Antarctic</option>
+     </select>
+    </form>
+   </nav>
+  </header>
+
+  <main
+   class="container px-12 py-9 mt-20 flex justify-around flex-wrap gap-10 mx-auto"
+   id="countries"
+  >
+   <div
+    class="rounded-lg shadow-lg border-2 p-4 hover:shadow-xl transition bg-neutral-200 max-w-xs"
+   >
+    <div class="img-wrapper w-full h-48">
+     <img src="https://flagcdn.com/w320/jp.png" class="w-fit" />
+    </div>
+
+    <div class="cord-body pl-2">
+     <h1 class="my-2 text-4xl" id="country_name">Japan</h1>
+
+     <h3 class="text-2xl mb-2">
+      Capital:
+      <span class="font-thin" id="capital">Tokio</span>
+     </h3>
+
+     <h3 class="text-2xl mb-2">
+      Population:
+      <span class="font-thin">Tokio</span>
+     </h3>
+
+     <h3 class="text-2xl mb-2">
+      Area:
+      <span class="font-thin">Tokio</span>
+     </h3>
+
+     <h3 class="text-2xl">
+      Region:
+      <span class="font-thin" id="region">Tokio</span>
+     </h3>
+    </div>
+   </div>
+  </main>
+ </body>
+</html>
